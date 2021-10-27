@@ -225,9 +225,11 @@
 
     <script type="text/babel">
       function List(props) {
+        const [showItem, setShowItem] = React.useState(true);
         return (
           <ul>
-            <li>LIST</li>
+            {showItem && <h1>hello</h1>}
+            <li onClick={() => setShowItem((prevState) => !prevState)}>LIST</li>
           </ul>
         );
       }
